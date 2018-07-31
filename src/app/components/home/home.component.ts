@@ -53,19 +53,19 @@
  export const homeChildRoutes : Routes = [
  {
  	path: '',
- 	component: StudentListComponent
+ 	loadChildren:"app/components/student/list/student-list.module#StudentListModule"
  },
  {
  	path: 'add',
- 	component: StudentAddComponent
- },
+	loadChildren:"app/components/student/add/student-add.module#StudentAddModule"
+},
  {
  	path: 'update/:id',
- 	component: StudentAddComponent
+	 loadChildren:"app/components/student/add/student-add.module#StudentAddModule"
  },
  {
  	path: 'detail/:id',
- 	component: StudentDetailsComponent
+	 loadChildren:"app/components/student/details/student-details.module#StudentDetailModule"
  }
  ];
 

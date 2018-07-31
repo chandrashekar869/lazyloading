@@ -33,9 +33,8 @@ import { HighlightStudentDirective } from './directives/highlight-student.direct
 const routes : Routes = [
 {
 	path: '',
-	component: HomeComponent,
-	children :homeChildRoutes,
-	canActivate : [AuthService]
+	loadChildren:"app/components/home/home.module#HomeModule",
+	canActivate:[AuthService]
 },
 {
 	path: 'login',
@@ -50,13 +49,9 @@ const routes : Routes = [
 @NgModule({
 	declarations: [
 	AppComponent,
-	StudentListComponent,
-	StudentDetailsComponent,
-	StudentAddComponent,
 	LoginComponent,
-	HomeComponent,
-	FilterPipe,
-	PhonePipe,
+		
+	
 	HighlightStudentDirective
 	],
 	imports: [
